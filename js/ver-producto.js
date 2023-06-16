@@ -1,18 +1,17 @@
 function fotoProducto() {
-const producto = JSON.parse(localStorage.getItem("producto"));
-let contenido = `<div class="col-md-4">
-<img src="${producto.imagen}" class="card-img-top img-thumbnail rounded mx-auto d-block rounded " alt ="${producto.nombre}"></img>
-</div>
-<div class="col-md-4 bstertiary">
-<p class="card-text"><b>${producto.categoria}</b></p>
-<h4 class="h4 pb-2 mb-4 tbg-secondary border-bottom border-secondary">${producto.nombre}</h4>
- <p class="card-text"><b>$${producto.precio}</b></p>
- <p class="my-5"><button class="btn btn-light btn-sm" onclick="agregarProducto(${producto.id});">Agregar</button></p>
-</div>`;
-
-document.getElementById("contenido").innerHTML = contenido;
-
-}
-
+    const producto = JSON.parse(localStorage.getItem("producto"));
+    let contenido = `<div class="col-md-4">
+      <img src="${producto.imagen}" class="card-img-top img-thumbnail rounded mx-auto d-block rounded " alt="${producto.nombre}">
+    </div>
+    <div class="col-md-4 bstertiary">
+      <p class="card-text"><b>${producto.categoria}</b></p>
+      <h4 class="text-uppercase fw-light pb-2 mb-4 tbg-secondary border-bottom border-secondary">${producto.nombre}</h4>
+      <p class="card-text"><b>$${producto.precio}</b></p>
+      <p class="my-5"><button class="btn btn-light btn-sm" onclick="agregarProducto(${producto.id});">Comprar</button></p>
+    </div>`;
+  
+    document.getElementById("contenido").innerHTML = contenido;
+  }
+  
 fotoProducto();
 botonCarrito();

@@ -54,7 +54,7 @@ function sumaTotalProductos() {
     return carrito.reduce((acumulador, item) => acumulador += item.precio, 0);
 }
 
-function renderBotonCarrito() {
+function BotonCarrito() {
     let botonCarrito = document.getElementById("botonCarrito");
     let contenido = `<button type="button" class="btn bg-light position-relative">
     <img src="images/cart2.svg" alt="Carrito" width="32">
