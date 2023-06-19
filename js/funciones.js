@@ -74,7 +74,6 @@ function botonCarrito() {
 }
 
 function fotoProductos() {
-    // Actualiza la imagen del carrito según la cantidad de productos en el carrito
     const cantidadProductos = cantidadTotalProductos();
     const imagenCarrito = document.querySelector("#imagenCarrito");
 

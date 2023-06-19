@@ -34,18 +34,15 @@ function fotoProductos() {
 }
 
 function mostrarProductos() {
-  // Implementa la lógica para mostrar los productos en la página
 }
 
 function agregarProducto(id) {
-  // Implementa la lógica para agregar un producto al carrito
 }
 
 function eliminarProducto(id) {
   let productos = cargarCarritoLS();
   let index = -1;
 
-  // Buscar el índice del producto en el arreglo
   for (let i = 0; i < productos.length; i++) {
     if (productos[i].id === id) {
       index = i;
@@ -53,7 +50,6 @@ function eliminarProducto(id) {
     }
   }
 
-  // Si se encontró el producto, eliminarlo del arreglo
   if (index !== -1) {
     productos.splice(index, 1);
     guardarCarritoLS(productos);
@@ -62,7 +58,6 @@ function eliminarProducto(id) {
 }
 
 function calcularTotal() {
-  // Implementa la lógica para calcular el total de los productos en el carrito
 }
 
 function vaciarCarrito() {
