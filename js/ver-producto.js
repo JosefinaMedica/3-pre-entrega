@@ -1,5 +1,7 @@
 function fotoProducto() {
-    const producto = JSON.parse(localStorage.getItem("producto"));
+    const idProducto = localStorage.getItem("idProductoSeleccionado");
+    const producto = buscarProducto(idProducto)
+    console.log(producto)
     let contenido = `<div class="col-md-4">
       <img src="${producto.imagen}" class="card-img-top img-thumbnail rounded mx-auto d-block rounded " alt="${producto.nombre}">
     </div>

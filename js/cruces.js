@@ -20,26 +20,9 @@ function fotoProductos() {
 }
 
 function verProducto(id) {
-  agregarProducto(id);
+  guardarIdProductoSeleccionado(id);
   location.href = "ver-producto.html";
 }
-
-function mostrarProductos() {
-
-}
-
-function agregarProducto() {
-}
-
-function eliminarProducto() {
-}
-
-function calcularTotal() {
-}
-
-function vaciarCarrito() {
-}
-
 
 fotoProductos();
 

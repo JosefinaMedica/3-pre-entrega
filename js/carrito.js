@@ -37,6 +37,7 @@ function mostrarProductos() {
 }
 
 function agregarProducto(id) {
+  console.log("carrito")
 }
 
 function eliminarProducto(id) {

@@ -14,10 +14,13 @@ function cargarCarritoLS() {
     return JSON.parse(localStorage.getItem("carrito")) || [];
 }
 
+function guardarIdProductoSeleccionado(id) {
+    localStorage.setItem("idProductoSeleccionado", id.toString());
+}
 function buscarProducto(id) {
     const productos = cargarProductosLS();
     
-    return productos.find(item => item.id === id);
+    return productos.find(item => item.id === +id);
 }
 
 function agregarProducto(id) {
@@ -26,6 +29,7 @@ function agregarProducto(id) {
     carrito.push(producto);
     guardarCarritoLS(carrito);
     botonCarrito();
+    console.log("funciones")
 }
 
 function eliminarProducto(id) {
