@@ -40,6 +40,7 @@ function eliminarProducto(id) {
     fotoProductos();
 }
 
+
 function vaciarCarrito() {
     localStorage.removeItem("carrito");
     botonCarrito();
