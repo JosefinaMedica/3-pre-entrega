@@ -67,4 +67,4 @@ function vaciarCarrito() {
 }
 
 fotoProductos();
-botonCarrito();
+BotonCarrito();

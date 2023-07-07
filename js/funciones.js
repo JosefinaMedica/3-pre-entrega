@@ -1,10 +1,6 @@
-function guardarProductosLS() {
-    localStorage.setItem("productos", JSON.stringify(productos));
-}
-
-function cargarProductosLS() {
-    return JSON.parse(localStorage.getItem("productos"));
-}
+async function cargarProductos() {
+    return (await fetch("./js/productos.json")).json();
+  }
 
 function guardarCarritoLS(carrito) {
     localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -14,12 +10,9 @@ function cargarCarritoLS() {
     return JSON.parse(localStorage.getItem("carrito")) || [];
 }
 
-function guardarIdProductoSeleccionado(id) {
-    localStorage.setItem("idProductoSeleccionado", id.toString());
-}
-function buscarProducto(id) {
-    const productos = cargarProductosLS();
-    
+
+async function buscarProductoPorId(id) {
+    const productos = await cargarProductos();
     return productos.find(item => item.id === +id);
 }
 
@@ -90,5 +83,3 @@ function fotoProductos() {
         }
     }
 }
-
-  
