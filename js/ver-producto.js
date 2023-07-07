@@ -14,7 +14,7 @@ function fotoProducto() {
     document.getElementById("contenido").innerHTML = contenido;
   }
     
-    getProducts();
+ 
   
 fotoProducto();
 botonCarrito();

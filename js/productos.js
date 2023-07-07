@@ -1,11 +1,12 @@
 
 let productos = [];
 
-fetch("./data/productos.json")
+fetch("./js/productos.json")
 .then(response => response.json())
 .then (data => {
     productos = data;
     cargarProductosLS(productos);
+    console.log(productos)
 })
 
 
