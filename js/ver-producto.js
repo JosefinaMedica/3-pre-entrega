@@ -18,5 +18,6 @@ async function mostrarProducto() {
   document.getElementById("contenido").innerHTML = contenido;
 }
     
+
 mostrarProducto();
 botonCarrito();

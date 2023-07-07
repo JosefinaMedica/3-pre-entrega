@@ -1,7 +1,7 @@
 async function cargarProductos() {
     return (await fetch("./js/productos.json")).json();
   }
-
+  
 function guardarCarritoLS(carrito) {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }

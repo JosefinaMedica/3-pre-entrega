@@ -9,7 +9,7 @@ function fotoProductos() {
         <td class="text-end"><button class="btn btn-light btn-sm ms-2" onclick="vaciarCarrito();" title="Vaciar Carrito">Vaciar Carrito</button>
         </td>
         </tr>`;
-
+        
     productos.forEach((producto) => {
       contenido += `<tr>
             <td><img src="${producto.imagen}" alt="${producto.nombre}" width="48"></td>

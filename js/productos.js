@@ -17,5 +17,6 @@ async function mostrarProductos() {
   document.getElementById("contenido").innerHTML = contenido;
 }
 
+
 mostrarProductos();
 
