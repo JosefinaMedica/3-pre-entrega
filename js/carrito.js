@@ -1,6 +1,6 @@
 function fotoProductos() {
-  let productos = cargarCarritoLS();
-  let contenido = "";
+  let productos = cargarCarrito();
+  let contenido = `<table class="table">`;
 
   if (cantidadTotalProductos() > 0) {
     contenido += `<table class="table">`;
@@ -11,7 +11,7 @@ function fotoProductos() {
         </tr>`;
         
     productos.forEach((producto) => {
-      contenido += `<tr>
+    contenido += `<tr>
             <td><img src="${producto.imagen}" alt="${producto.nombre}" width="48"></td>
             <td class="align-middle">${producto.nombre}</td>
             <td class="align-middle"><b>$${producto.precio}</b></td>
@@ -31,7 +31,7 @@ function fotoProductos() {
   }
 
   document.getElementById("contenido").innerHTML = contenido;
-}
+};
 
 function mostrarProductos() {
 }
@@ -41,7 +41,7 @@ function agregarProducto(id) {
 }
 
 function eliminarProducto(id) {
-  let productos = cargarCarritoLS();
+  let productos = cargarCarrito();
   let index = -1;
 
   for (let i = 0; i < productos.length; i++) {
@@ -53,7 +53,7 @@ function eliminarProducto(id) {
 
   if (index !== -1) {
     productos.splice(index, 1);
-    guardarCarritoLS(productos);
+    guardarCarrito(productos);
     fotoProductos();
   }
 }
